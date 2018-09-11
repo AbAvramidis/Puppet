@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"C:/Users/Admin/Desktop/test/Puppet_Week","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}},"virtualbox":{"/home/vagrant/shared":{"guestpath":"/home/vagrant/shared","hostpath":"C:/Users/Admin/Desktop/test/Puppet_Week/shared","disabled":false,"__vagrantfile":true}}}
