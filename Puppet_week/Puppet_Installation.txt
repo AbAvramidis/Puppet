@@ -19,3 +19,38 @@ facter ipaddress_eth1 => 10.0.10.10
 7) 
 sudo touch
 /etc/puppetlabs/code/environments/production/manifests/site.pp
+
+
+
+**Change the fqdn name to each VM to be unique!**
+
+cd /opt/
+ls
+
+Go to 
+/etc/puppetlabs/code/environments/production/manifests
+you will find site.pp 
+
+node 'agentpuppet.local' {
+ file { '/puppetfile.txt':
+   ensure => 'present',
+   content => "Hello Puppet Master!"
+  }
+}
+
+from the Agent do
+ puppet agent -t
+
+-------------
+node 'agentpuppet.local' {
+ file { '/puppetfile.txt':
+   ensure => 'present',
+   content => "Hello Puppet Master!\n"
+  }
+
+ package { 'tree':
+   ensure => 'installed',
+ }
+}
+
+inside site.pp file
