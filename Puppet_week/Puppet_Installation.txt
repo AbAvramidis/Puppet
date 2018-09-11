@@ -54,3 +54,43 @@ node 'agentpuppet.local' {
 }
 
 inside site.pp file
+
+
+
+
+
+class ntp {
+  package { 'ntp':
+    servers => [ '0.uk.pool.ntp.org' ],
+    ensure => 'installed',
+  }
+}
+
+--------------------------
+Server:
+
+
+$packages = [ 'java', 'git', 'maven' ]
+
+class pack {
+  package{ $packages:
+    ensure => 'installed',
+  }
+}
+
+class ntp {
+  package { 'ntp':
+    ensure => 'installed',
+  }
+
+
+}
+
+node 'agentpuppet.local' {
+  include pack
+  #{ class 'pack': }
+  include ntp
+}
+
+
+https://github.com/voxpupuli/puppet-jenkins
