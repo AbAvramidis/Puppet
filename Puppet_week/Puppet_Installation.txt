@@ -1,6 +1,11 @@
 Vagrant 10.0.10.10 Master Puppet
 As a vagrant sudo su to become Root user
 
+https://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-install-puppet-4-x-on-centos-7-rhel-7.html
+
+https://www.digitalocean.com/community/tutorials/how-to-install-puppet-4-in-a-master-agent-setup-on-centos-7
+
+
 Installation
 ------------
 1)sudo rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-
