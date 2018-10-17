@@ -26,6 +26,11 @@ sudo touch
 /etc/puppetlabs/code/environments/production/manifests/site.pp
 
 
+8) List certificates and remove if needs
+
+puppet cert list -a
+puppet cert clean agent.local
+
 
 **Change the fqdn name to each VM to be unique!**
 
